@@ -1,11 +1,11 @@
 ---
 title: "week1-hw"
-author: "Tianying Zhao"
-date: "9/1/2020"
-output:
-  pdf_document: default
-  html_document: default
+author: Tianying Zhao
+date: September 1, 2020
+output: github_document
 ---
+
+
 ## 27.3.1 Exercises
 
 1. Practice what you’ve learned by creating a brief CV. The title should be your name, and you should include headings for (at least) education or employment. Each of the sections should include a bulleted list of jobs/degrees. Highlight the year in bold.
@@ -38,9 +38,9 @@ I worked under Dr. Chuanbin Mao on a project to look for a specific phage that c
     ^[This is a footnote.]
     
     + Add a horizontal rule.
-    ---------------------------------------
+---------------------------------------
     + Add a block quote.
-    >
+> 
   
 3. Copy and paste the contents of diamond-sizes.Rmd from https://github.com/hadley/r4ds/tree/master/rmarkdown in to a local R markdown document. Check that you can run it, then add text after the frequency polygon that describes its most striking features.
 ```{r setup, include = FALSE}
