@@ -1,0 +1,60 @@
+---
+title: "week1-hw"
+author: "Tianying Zhao"
+date: "9/1/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+## 27.3.1 Exercises
+
+1. Practice what you’ve learned by creating a brief CV. The title should be your name, and you should include headings for (at least) education or employment. Each of the sections should include a bulleted list of jobs/degrees. Highlight the year in bold.
+
+# Tianying Zhao
+## Education
+* University of Hawaii at Manoa, Honolulu, HI, USA
+M.S. in Molecular Biosciences and Bioengineering, Sep **2017** — April **2020**
+
+* Lanzhou University, Lanzhou, Gansu, China
+B.S. in Biology, Sep **2013** — May **2017**
+
+## EXPERIENCE
+* University of Hawaii at Manoa, Honolulu, HI, USA
+Graduate Assistant, Aug **2017** — now
+
+I worked in Dr. Lang Wu’s lab exploring correlations between cancer and SNPs. I have experience dealing with SNPs using R and Python under Linux environment.
+
+I worked under Dr. Youping Deng on a project where we identified eight diagnostic lncRNA biomarkers for lung cancer. In this project, I worked with RNA-seq and Microarray data downloaded from TCGA and GEO, and R statistical packages under Linux environment. I gained experience in data analysis, including quality control, mutation calling, driver gene detection, and data visualization. 
+I also won the Award of Merit in CTAHR Ph.D. Student Poster Presentation at the 30th annual CTAHR Student Research Symposium, which helped me with poster design and communication skills.
+
+* University of Oklahoma, Norman, OK, USA
+Visiting Scholar, July **2016** — May **2017**
+
+I worked under Dr. Chuanbin Mao on a project to look for a specific phage that can stop cancer cells from contacting T-cells. I gained experience in performing wet-lab experiments.
+
+2. Using the R Markdown quick reference, figure out how to:
+
+    + Add a footnote.
+  footer: ""
+    + Add a horizontal rule.
+  ***
+    + Add a block quote.
+  >
+  
+3. Copy and paste the contents of diamond-sizes.Rmd from https://github.com/hadley/r4ds/tree/master/rmarkdown in to a local R markdown document. Check that you can run it, then add text after the frequency polygon that describes its most striking features.
+```{r setup, include = FALSE}
+library(ggplot2)
+library(dplyr)
+smaller <- diamonds %>% 
+  filter(carat <= 2.5)
+```
+
+We have data about `r nrow(diamonds)` diamonds. Only `r nrow(diamonds) - nrow(smaller)` are larger than 2.5 carats. The distribution of the remainder is shown below:
+
+```{r, echo = FALSE}
+smaller %>% 
+  ggplot(aes(carat)) + 
+  geom_freqpoly(binwidth = 0.01)
+```
+
+This figure shows the distribution of diamonds that are less than or equal to 2.5 carats. The x-axis represents the carat, and the y-axis displays the counts. We can tell that most of those diamonds are 0.3, 1.0, and 0.7 carats. Very few of them are more than 1.0 carat.
