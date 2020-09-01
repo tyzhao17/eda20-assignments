@@ -35,11 +35,12 @@ I worked under Dr. Chuanbin Mao on a project to look for a specific phage that c
 2. Using the R Markdown quick reference, figure out how to:
 
     + Add a footnote.
-  footer: ""
+    ^[This is a footnote.]
+    
     + Add a horizontal rule.
-  ***
+    ---------------------------------------
     + Add a block quote.
-  >
+    >
   
 3. Copy and paste the contents of diamond-sizes.Rmd from https://github.com/hadley/r4ds/tree/master/rmarkdown in to a local R markdown document. Check that you can run it, then add text after the frequency polygon that describes its most striking features.
 ```{r setup, include = FALSE}
